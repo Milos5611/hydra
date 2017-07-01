@@ -15,7 +15,8 @@ const style = {
     },
     bottom: {
         width: 980,
-        margin: "0 auto"
+        margin: "0 auto",
+        marginTop: -50
     }
 };
 

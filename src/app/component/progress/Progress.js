@@ -1,7 +1,8 @@
-import React from "react";
+import { Component } from "react";
 import LinearProgress from "material-ui/LinearProgress";
+import React from "react";
 
-export default class Progress extends React.Component {
+export default class Progress extends Component {
 
     constructor(props) {
         super(props);
