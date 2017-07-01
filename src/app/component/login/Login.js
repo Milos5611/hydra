@@ -18,7 +18,7 @@ const style = {
         width: "100%"
     },
     button: {
-        backgroundColor: "#2392a5",
+        backgroundColor: "#E20030",
         width: 240,
         height: 57,
         boxShadow: "none"
@@ -127,7 +127,7 @@ export default class Login extends PureComponent {
                     </div>
                 </div> ) :
                 <Redirect
-                    to="/surveys"
+                    to="/home"
                 />
         );
     }

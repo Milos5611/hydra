@@ -2,18 +2,12 @@ import { applyMiddleware, combineReducers, createStore } from "redux";
 import login from "../services/login";
 import message from "../services/message";
 import notification from "../services/notification";
-import surveyList from "../services/surveylist";
-import templateList from "../services/templatelist";
 import thunk from "redux-thunk";
-import unitList from "../services/unitlist";
 
 const reducers = {
     login,
     message,
-    notification,
-    surveyList,
-    templateList,
-    unitList
+    notification
 };
 
 const logger = store => next => action => {

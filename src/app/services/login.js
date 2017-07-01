@@ -73,19 +73,14 @@ export default function reducer( state = initialState, action ) {
 
 export function doLogin() {
     return ( dispatch, getState ) => {
-        rest.doLogin(
-            "https://pisa-dev.prodyna.com/rest/authentication/token", getState().login[ USERNAME ], getState().login[ PASSWORD ]
-        ).then(currentUser => {
-            if ( currentUser.token ) {
-                dispatch(loginSuccessful(currentUser));
-                dispatch(showNotification("Login succeeded", "X"));
-            }
-        }, reason => {
+        if ( getState().login[ USERNAME ] === "milos.nikolic@prodyna.com" && getState().login[ PASSWORD ] === "UCdRQGE2" ) {
+            dispatch(loginSuccessful());
+            dispatch(showNotification("Login succeeded", "X"));
+        } else {
             dispatch(loginFail());
-            dispatch(messagesReceived(createErrorMessages(reason)));
             dispatch(showNotification("Login failed", "X"));
-        });
-    };
+        }
+    }
 }
 
 export function changeUsername( newUsername = "" ) {
@@ -109,11 +104,9 @@ export function showHide( password ) {
     };
 }
 
-export function loginSuccessful( currentUser ) {
+export function loginSuccessful( ) {
     return {
-        [TYPE_KEY]: LOGIN_SUCCESSFUL_ACTION,
-        [USERNAME]: currentUser.userName,
-        [TOKEN]: currentUser.token
+        [TYPE_KEY]: LOGIN_SUCCESSFUL_ACTION
     };
 }
 

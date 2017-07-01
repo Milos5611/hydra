@@ -1,5 +1,6 @@
 import "./index.scss";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Home from "./component/home/Home";
 import Listener from "../listener/listener";
 import Login from "./container/Login";
 import Notification from "./container/Notification";
@@ -24,6 +25,11 @@ const MainApplication = () => {
                             exact
                             path="/"
                             component={Login}
+                        />
+                        <Route
+                            exact
+                            path="/home"
+                            component={Home}
                         />
                     </Switch>
                     <Route component={Notification}/>
