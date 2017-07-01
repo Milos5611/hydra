@@ -1,47 +1,22 @@
 import React from "react";
-import { Component } from "react";
-import IconMenu from "material-ui/IconMenu";
-import IconButton from "material-ui/IconButton";
-import NavigationExpandMoreIcon from "material-ui/svg-icons/navigation/expand-more";
-import MenuItem from "material-ui/MenuItem";
-import RaisedButton from "material-ui/RaisedButton";
-import { Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle } from "material-ui/Toolbar";
+import Paper from "material-ui/Paper";
+import Header from "../header/Header";
 
 const style = {
-    paper: {
-        backgroundColor: "#E20030"
-    }
+    height: 380,
+    width: "100%",
+    background: "url('/images/app/bg_exchange.jpg') no-repeat center center",
+    margin: 0,
+    textAlign: "center",
+    display: "inline-block",
+    backgroundSize: "cover"
 };
 
-export default class Home extends Component {
+const PaperExampleSimple = () => (
+    <div>
+        <Header/>
+        <Paper style={style} zDepth={1}/>
+    </div>
+);
 
-    constructor( props ) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <Toolbar style={style.paper}>
-                <ToolbarGroup firstChild/>
-                <ToolbarGroup>
-                    <ToolbarTitle text="Options"/>
-                    <ToolbarSeparator />
-                    <RaisedButton
-                        label="Create Broadcast"
-                        primary
-                    />
-                    <IconMenu
-                        iconButtonElement={
-                            <IconButton touch>
-                                <NavigationExpandMoreIcon />
-                            </IconButton>
-                        }
-                    >
-                        <MenuItem primaryText="Download"/>
-                        <MenuItem primaryText="More Info"/>
-                    </IconMenu>
-                </ToolbarGroup>
-            </Toolbar>
-        );
-    }
-}
+export default PaperExampleSimple;
