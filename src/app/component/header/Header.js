@@ -1,6 +1,6 @@
-import React from "react";
-import Progress from "../progress/Progress";
 import { List, ListItem } from "material-ui";
+import Progress from "../progress/Progress";
+import React from "react";
 
 const style = {
     color: "#E20030",

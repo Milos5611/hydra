@@ -1,4 +1,5 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
+import cards from "../services/card";
 import login from "../services/login";
 import message from "../services/message";
 import notification from "../services/notification";
@@ -7,7 +8,8 @@ import thunk from "redux-thunk";
 const reducers = {
     login,
     message,
-    notification
+    notification,
+    cards
 };
 
 const logger = store => next => action => {

@@ -1,6 +1,4 @@
-import { createErrorMessages, messagesReceived } from "./message";
 import { TYPE_KEY } from "../common/constant";
-import rest from "../common/rest";
 import { showNotification } from "./notification";
 
 const LOGIN_SUCCESSFUL_ACTION = "LOGIN_SUCCESSFUL";
@@ -80,7 +78,7 @@ export function doLogin() {
             dispatch(loginFail());
             dispatch(showNotification("Login failed", "X"));
         }
-    }
+    };
 }
 
 export function changeUsername( newUsername = "" ) {

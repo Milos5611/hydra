@@ -1,5 +1,6 @@
 import "./index.scss";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Cards from "./container/Cards";
 import Home from "./component/home/Home";
 import Listener from "../listener/listener";
 import Login from "./container/Login";
@@ -33,6 +34,7 @@ const MainApplication = () => {
                         />
                     </Switch>
                     <Route component={Notification}/>
+                    <Route component={Cards}/>
                 </div>
             </Router>
         </Provider>

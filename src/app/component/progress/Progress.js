@@ -20,6 +20,12 @@ export default class Progress extends Component {
         clearTimeout(this.timer);
     }
 
+    render() {
+        return (
+            <LinearProgress color="#E20030" mode="determinate" value={this.state.completed} />
+        );
+    }
+
     progress(completed) {
         if (completed > 100) {
             this.setState({completed: 100});
@@ -28,11 +34,5 @@ export default class Progress extends Component {
             const diff = Math.random() * 20;
             this.timer = setTimeout(() => this.progress(completed + diff), 1000);
         }
-    }
-
-    render() {
-        return (
-            <LinearProgress color="#E20030" mode="determinate" value={this.state.completed} />
-        );
     }
 }
