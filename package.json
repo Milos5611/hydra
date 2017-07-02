@@ -7,9 +7,10 @@
     "url": "https://bitbucket.prodyna.com/scm/pisa/webclient.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack-dev-server.config.js --hot --progress --inline --colors",
-    "build": "webpack --config webpack-production.config.js --progress --colors --display-error-details",
-    "test": "jest"
+      "dev": "webpack-dev-server --config webpack.config.js --hot --progress --inline --colors",
+      "build": "webpack --config webpack.config.js --progress --colors --display-error-details",
+      "postinstall": "npm run build",
+      "start": "node server.js"
   },
   "jest": {
     "verbose": true,
