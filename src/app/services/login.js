@@ -71,7 +71,8 @@ export default function reducer( state = initialState, action ) {
 
 export function doLogin() {
     return ( dispatch, getState ) => {
-        if ( getState().login[ USERNAME ] === "milos.nikolic@prodyna.com" && getState().login[ PASSWORD ] === "UCdRQGE2" ) {
+        if ( getState().login[ USERNAME ] === "milos.nikolic@prodyna.com" && getState().login[
+        PASSWORD ] === "milos" ) {
             dispatch(loginSuccessful());
             dispatch(showNotification("Login succeeded", "X"));
         } else {
