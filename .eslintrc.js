@@ -67,7 +67,6 @@ module.exports = {
         "react/no-is-mounted": 2,
         "react/no-string-refs": 2,
         "react/prefer-es6-class": 2,
-        "react/prefer-stateless-function": 2,
         "react/self-closing-comp": 2,
         "react/void-dom-elements-no-children": 2,
         "react/style-prop-object": 2,

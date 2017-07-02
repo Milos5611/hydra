@@ -1,0 +1,28 @@
+body {
+    background: #e3e3e3;
+}
+
+.cg--image {
+    background: url("/images/app/nexus_5x.png") no-repeat;
+    display: inline-block;
+    width: 100px;
+    height: 165px;
+    background-size: cover;
+}
+
+.cg--location {
+    background: url("/images/app/location.png") no-repeat center center;
+    display: inline-block;
+    width: 450px;
+    height: 350px;
+    background-size: cover;
+}
+
+.cg--location-wrapper {
+    width: 90% !important;
+}
+
+.cg--information {
+    display: inline-block;
+    vertical-align: top;
+}
