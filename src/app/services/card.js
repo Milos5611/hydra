@@ -75,12 +75,9 @@ export function getSafeLocation() {
             if ( json.safe_locations.length ) {
                 dispatch(dataSafeLocationSuccessful(json.safe_locations));
                 dispatch(showNotification("Collecting data succeeded", "X"));
-            } else {
-                dispatch(showNotification("Collecting data failed", "X"));
             }
         }, reason => {
             dispatch(showNotification(reason));
-            dispatch(showNotification("Collecting data failed", "X"));
         });
     };
 }
